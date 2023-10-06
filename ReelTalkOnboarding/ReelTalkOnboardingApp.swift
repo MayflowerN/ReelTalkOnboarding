@@ -11,7 +11,8 @@ import SwiftUI
 struct ReelTalkOnboardingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Splash_1()
+            
         }
     }
 }
