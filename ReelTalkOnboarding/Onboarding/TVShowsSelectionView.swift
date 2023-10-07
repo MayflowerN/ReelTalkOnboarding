@@ -11,27 +11,18 @@ struct TVShowsSelectionView: View {
     @State private var showKeepItReelView: Bool = false
     var body: some View {
         ZStack {
-            Color(red: 0.13, green: 0.13, blue: 0.13)
+            Color(hex: 0x212121)
                 .edgesIgnoringSafeArea(.all)
             if showKeepItReelView {
                 KeepItReelView()
             } else {
             VStack {
                 Text("TVShowSelectionView")
-                    .foregroundColor(.white)
-                Button (action: {
-                    
+                    .foregroundColor(Color(hex: 0xFFFFFF))
+                
+                SquareButton(title: "Continue") {
                     showKeepItReelView = true
-                }) {
-                    // Mobile/Headline
-                    Text("Continue")
-                        .font(Font.custom("Avenir Next", size: 17))
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(Color(red: 0.13, green: 0.13, blue: 0.13))
-                        .padding(10)
-                        .frame(width: 300, height: 48, alignment: .center)
-                        .background(Color(red: 1, green: 0.66, blue: 0.14))
-                        .cornerRadius(8)
+              
                 }
                 }
             }

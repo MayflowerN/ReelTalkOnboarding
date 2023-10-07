@@ -9,10 +9,12 @@ import SwiftUI
 
 @main
 struct ReelTalkOnboardingApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     var body: some Scene {
         WindowGroup {
+
             Splash_1()
-            
         }
     }
 }

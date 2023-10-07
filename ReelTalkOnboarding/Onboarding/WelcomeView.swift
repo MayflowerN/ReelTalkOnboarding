@@ -7,56 +7,47 @@
 
 import SwiftUI
 
-// Represents a personalized welcome screen for users after they've signed in.
+
 struct WelcomeView: View {
     // Controls the presentation of the GenreSelection screen.
-    @State private var showGenreSelectionView: Bool = false
+    
+    @State private var showPushNotifView: Bool = false
     
     var body: some View {
-        ZStack {  // Allows for layering of views.
-            
-            // Sets a uniform dark background color across the entire view.
-            Color(red: 0.13, green: 0.13, blue: 0.13)
-                .edgesIgnoringSafeArea(.all)  // Ensures full coverage, extending beyond safe areas.
+        ZStack {  
+            Color(hex: 0x212121)
+                .edgesIgnoringSafeArea(.all)
             
             // Conditional view rendering: If showGenreSelectionView is true, present the GenreSelectionView.
-            if showGenreSelectionView {
-                GenreSelectionView()
+            if showPushNotifView {
+                PushNotifView()
             } else {
-                // Vertical stack to arrange components linearly.
+               
                 VStack {
                     
                     // Personalized welcome text for the user.
                     Text("Welcome, Karl!")
-                        .font(Font.custom("Avenir Next", size: 28))
+                        .font(.custom(.demiBold, size: 28))
                         .multilineTextAlignment(.center)
-                        .foregroundColor(.white.opacity(0.92))
+                        .foregroundColor(Color(hex: 0xFFFFFFEB))
                         .frame(width: 312, alignment: .top)
                     
-                    // Placeholder image for a more visual greeting.
+                    
                     Image ("Welcomeimage")
                     
                     // Description text to give users an idea about what's next.
                     Text("Let’s get to know you better and personalize your experience!")
-                        .font(Font.custom("Avenir Next", size: 17))
+                        .font(.custom(.regular, size: 17))
                         .kerning(0.34)
                         .multilineTextAlignment(.center)
-                        .foregroundColor(.white.opacity(0.92))
+                        .foregroundColor(Color(hex: 0xFFFFFFEB))
                         .frame(width: 344, alignment: .top)
-                        .padding(70)  // Provides a uniform space around the text.
+                        .padding(70)
                     
                     // Action button that, when tapped, presents the genre selection view.
-                    Button (action: {
-                        showGenreSelectionView = true
-                    }) {
-                        Text("Continue")
-                            .font(Font.custom("Avenir Next", size: 17))
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(Color(red: 0.13, green: 0.13, blue: 0.13))
-                            .padding(10)  // Padding around the text for better touch target and aesthetics.
-                            .frame(width: 300, height: 48, alignment: .center)
-                            .background(Color(red: 1, green: 0.66, blue: 0.14))  // Button color.
-                            .cornerRadius(8)  // Rounded corners for the button.
+
+                    SquareButton(title: "Continue") {
+                        showPushNotifView = true
                     }
                 }
             }

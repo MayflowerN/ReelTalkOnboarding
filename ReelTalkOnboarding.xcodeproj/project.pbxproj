@@ -28,6 +28,17 @@
 		9A96FF002ACF9F2000F67CDA /* AvenirNextLTPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9A96FEFD2ACF9F2000F67CDA /* AvenirNextLTPro-Bold.otf */; };
 		9A96FF012ACF9F2000F67CDA /* AvenirNextLTPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9A96FEFE2ACF9F2000F67CDA /* AvenirNextLTPro-Regular.otf */; };
 		9A96FF022ACF9F2000F67CDA /* AvenirNextLTPro-It.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9A96FEFF2ACF9F2000F67CDA /* AvenirNextLTPro-It.otf */; };
+		9A96FF052AD0142B00F67CDA /* SquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96FF042AD0142B00F67CDA /* SquareButton.swift */; };
+		9A96FF072AD0145A00F67CDA /* DemiBoldText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96FF062AD0145A00F67CDA /* DemiBoldText.swift */; };
+		9A96FF092AD0147C00F67CDA /* RegularText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96FF082AD0147C00F67CDA /* RegularText.swift */; };
+		9A96FF0B2AD014EE00F67CDA /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96FF0A2AD014EE00F67CDA /* Color+Extension.swift */; };
+		9A96FF0D2AD0151300F67CDA /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96FF0C2AD0151300F67CDA /* Font+Extension.swift */; };
+		9A96FF0F2AD0153700F67CDA /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96FF0E2AD0153700F67CDA /* AppFont.swift */; };
+		9A96FF112AD0155E00F67CDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96FF102AD0155E00F67CDA /* AppDelegate.swift */; };
+		9A96FF142AD0208E00F67CDA /* ChipModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96FF132AD0208E00F67CDA /* ChipModel.swift */; };
+		9A96FF1A2AD0F40C00F67CDA /* avenir-next-demibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A96FF192AD0F40C00F67CDA /* avenir-next-demibold.ttf */; };
+		9A96FF1C2AD0F46A00F67CDA /* avenir-next-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A96FF1B2AD0F46A00F67CDA /* avenir-next-medium.ttf */; };
+		9A96FF1E2AD0F96200F67CDA /* MediumText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A96FF1D2AD0F96200F67CDA /* MediumText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +65,17 @@
 		9A96FEFE2ACF9F2000F67CDA /* AvenirNextLTPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-Regular.otf"; sourceTree = "<group>"; };
 		9A96FEFF2ACF9F2000F67CDA /* AvenirNextLTPro-It.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNextLTPro-It.otf"; sourceTree = "<group>"; };
 		9A96FF032ACF9F7600F67CDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9A96FF042AD0142B00F67CDA /* SquareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareButton.swift; sourceTree = "<group>"; };
+		9A96FF062AD0145A00F67CDA /* DemiBoldText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemiBoldText.swift; sourceTree = "<group>"; };
+		9A96FF082AD0147C00F67CDA /* RegularText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularText.swift; sourceTree = "<group>"; };
+		9A96FF0A2AD014EE00F67CDA /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		9A96FF0C2AD0151300F67CDA /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		9A96FF0E2AD0153700F67CDA /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		9A96FF102AD0155E00F67CDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9A96FF132AD0208E00F67CDA /* ChipModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipModel.swift; sourceTree = "<group>"; };
+		9A96FF192AD0F40C00F67CDA /* avenir-next-demibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "avenir-next-demibold.ttf"; sourceTree = "<group>"; };
+		9A96FF1B2AD0F46A00F67CDA /* avenir-next-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "avenir-next-medium.ttf"; sourceTree = "<group>"; };
+		9A96FF1D2AD0F96200F67CDA /* MediumText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +89,155 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EFEC40F2ACFE6CF00D7618D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9A96FF0A2AD014EE00F67CDA /* Color+Extension.swift */,
+				9A96FF0C2AD0151300F67CDA /* Font+Extension.swift */,
+				9A96FF0E2AD0153700F67CDA /* AppFont.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1EFEC4122ACFF36300D7618D /* Lifecycle */ = {
+			isa = PBXGroup;
+			children = (
+				9A96FECB2ACD17E600F67CDA /* ReelTalkOnboardingApp.swift */,
+				9A96FF102AD0155E00F67CDA /* AppDelegate.swift */,
+			);
+			path = Lifecycle;
+			sourceTree = "<group>";
+		};
+		1EFEC4172ACFF57A00D7618D /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9A96FEFC2ACF9EC900F67CDA /* Font */,
+				1EFEC4262ACFF91100D7618D /* Resources */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1EFEC41A2ACFF7EF00D7618D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9A96FF152AD0D54F00F67CDA /* GenreSelection */,
+				1EFEC41F2ACFF87600D7618D /* Profile */,
+				1EFEC41C2ACFF82500D7618D /* Authentication */,
+				9A96FEF92ACF8EA600F67CDA /* Nav */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1EFEC41B2ACFF7F700D7618D /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				9A96FED92ACD18DB00F67CDA /* Splash_1.swift */,
+				9A96FEE72ACD4F4800F67CDA /* ReelTalkOnboardingView.swift */,
+				9A96FEDB2ACD1B8C00F67CDA /* Onboarding_1.swift */,
+				9A96FEDD2ACD1E7700F67CDA /* Onboarding_2.swift */,
+				9A96FEDF2ACD1E8600F67CDA /* Onboarding_3.swift */,
+				9A96FEEF2ACD96D100F67CDA /* WelcomeView.swift */,
+				9A96FEED2ACD94A900F67CDA /* PushNotifView.swift */,
+				9A96FEF32ACE511100F67CDA /* MoviesSelectionView.swift */,
+				9A96FEF72ACEC3A700F67CDA /* TVShowsSelectionView.swift */,
+				9A96FEF52ACE51E000F67CDA /* KeepItReelView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		1EFEC41C2ACFF82500D7618D /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				1EFEC41E2ACFF83100D7618D /* SignUp */,
+				1EFEC41D2ACFF82C00D7618D /* Login */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		1EFEC41D2ACFF82C00D7618D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9A96FEE92ACD5DD100F67CDA /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1EFEC41E2ACFF83100D7618D /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				9A96FEE12ACD219D00F67CDA /* SignUpView.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		1EFEC41F2ACFF87600D7618D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1EFEC4222ACFF89C00D7618D /* Model */,
+				1EFEC4212ACFF89600D7618D /* ViewModels */,
+				1EFEC4202ACFF89100D7618D /* Views */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		1EFEC4202ACFF89100D7618D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9A96FEEB2ACD648300F67CDA /* ProfileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1EFEC4212ACFF89600D7618D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1EFEC4222ACFF89C00D7618D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1EFEC4262ACFF91100D7618D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9A96FECF2ACD17E800F67CDA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1EFEC4272ACFF96B00D7618D /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				1EFEC42B2ACFFA7300D7618D /* Buttons */,
+				1EFEC4282ACFF97500D7618D /* Texts */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		1EFEC4282ACFF97500D7618D /* Texts */ = {
+			isa = PBXGroup;
+			children = (
+				9A96FF062AD0145A00F67CDA /* DemiBoldText.swift */,
+				9A96FF082AD0147C00F67CDA /* RegularText.swift */,
+				9A96FF1D2AD0F96200F67CDA /* MediumText.swift */,
+				1EFEC40F2ACFE6CF00D7618D /* Extensions */,
+			);
+			path = Texts;
+			sourceTree = "<group>";
+		};
+		1EFEC42B2ACFFA7300D7618D /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				9A96FF042AD0142B00F67CDA /* SquareButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		9A96FEBF2ACD17E500F67CDA = {
 			isa = PBXGroup;
 			children = (
@@ -86,13 +257,13 @@
 		9A96FECA2ACD17E600F67CDA /* ReelTalkOnboarding */ = {
 			isa = PBXGroup;
 			children = (
+				1EFEC4272ACFF96B00D7618D /* UIComponents */,
+				1EFEC41B2ACFF7F700D7618D /* Onboarding */,
+				1EFEC41A2ACFF7EF00D7618D /* Modules */,
+				1EFEC4122ACFF36300D7618D /* Lifecycle */,
 				9A96FF032ACF9F7600F67CDA /* Info.plist */,
-				9A96FEFC2ACF9EC900F67CDA /* Font */,
-				9A96FECB2ACD17E600F67CDA /* ReelTalkOnboardingApp.swift */,
-				9A96FECF2ACD17E800F67CDA /* Assets.xcassets */,
+				1EFEC4172ACFF57A00D7618D /* Common */,
 				9A96FED12ACD17E800F67CDA /* Preview Content */,
-				9A96FEF92ACF8EA600F67CDA /* Onboarding */,
-				9A96FEFA2ACF8F0600F67CDA /* HomeView.swift */,
 			);
 			path = ReelTalkOnboarding;
 			sourceTree = "<group>";
@@ -105,35 +276,57 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		9A96FEF92ACF8EA600F67CDA /* Onboarding */ = {
+		9A96FEF92ACF8EA600F67CDA /* Nav */ = {
 			isa = PBXGroup;
 			children = (
-				9A96FED92ACD18DB00F67CDA /* Splash_1.swift */,
-				9A96FEE72ACD4F4800F67CDA /* ReelTalkOnboardingView.swift */,
-				9A96FEDB2ACD1B8C00F67CDA /* Onboarding_1.swift */,
-				9A96FEDD2ACD1E7700F67CDA /* Onboarding_2.swift */,
-				9A96FEDF2ACD1E8600F67CDA /* Onboarding_3.swift */,
-				9A96FEE12ACD219D00F67CDA /* SignUpView.swift */,
-				9A96FEE92ACD5DD100F67CDA /* LoginView.swift */,
-				9A96FEEB2ACD648300F67CDA /* ProfileView.swift */,
-				9A96FEEF2ACD96D100F67CDA /* WelcomeView.swift */,
-				9A96FEED2ACD94A900F67CDA /* PushNotifView.swift */,
-				9A96FEF12ACE482800F67CDA /* GenreSelectionView.swift */,
-				9A96FEF32ACE511100F67CDA /* MoviesSelectionView.swift */,
-				9A96FEF72ACEC3A700F67CDA /* TVShowsSelectionView.swift */,
-				9A96FEF52ACE51E000F67CDA /* KeepItReelView.swift */,
+				9A96FEFA2ACF8F0600F67CDA /* HomeView.swift */,
 			);
-			path = Onboarding;
+			path = Nav;
 			sourceTree = "<group>";
 		};
 		9A96FEFC2ACF9EC900F67CDA /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				9A96FF1B2AD0F46A00F67CDA /* avenir-next-medium.ttf */,
+				9A96FF192AD0F40C00F67CDA /* avenir-next-demibold.ttf */,
 				9A96FEFD2ACF9F2000F67CDA /* AvenirNextLTPro-Bold.otf */,
 				9A96FEFF2ACF9F2000F67CDA /* AvenirNextLTPro-It.otf */,
 				9A96FEFE2ACF9F2000F67CDA /* AvenirNextLTPro-Regular.otf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		9A96FF152AD0D54F00F67CDA /* GenreSelection */ = {
+			isa = PBXGroup;
+			children = (
+				9A96FF182AD0D57000F67CDA /* Views */,
+				9A96FF172AD0D56900F67CDA /* ViewModels */,
+				9A96FF162AD0D56100F67CDA /* Models */,
+			);
+			path = GenreSelection;
+			sourceTree = "<group>";
+		};
+		9A96FF162AD0D56100F67CDA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9A96FF132AD0208E00F67CDA /* ChipModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9A96FF172AD0D56900F67CDA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9A96FF182AD0D57000F67CDA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9A96FEF12ACE482800F67CDA /* GenreSelectionView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,9 +388,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A96FED32ACD17E800F67CDA /* Preview Assets.xcassets in Resources */,
+				9A96FF1C2AD0F46A00F67CDA /* avenir-next-medium.ttf in Resources */,
 				9A96FED02ACD17E800F67CDA /* Assets.xcassets in Resources */,
 				9A96FF012ACF9F2000F67CDA /* AvenirNextLTPro-Regular.otf in Resources */,
 				9A96FF002ACF9F2000F67CDA /* AvenirNextLTPro-Bold.otf in Resources */,
+				9A96FF1A2AD0F40C00F67CDA /* avenir-next-demibold.ttf in Resources */,
 				9A96FF022ACF9F2000F67CDA /* AvenirNextLTPro-It.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,8 +406,10 @@
 			files = (
 				9A96FEF62ACE51E000F67CDA /* KeepItReelView.swift in Sources */,
 				9A96FEDC2ACD1B8C00F67CDA /* Onboarding_1.swift in Sources */,
+				9A96FF0F2AD0153700F67CDA /* AppFont.swift in Sources */,
 				9A96FEE82ACD4F4800F67CDA /* ReelTalkOnboardingView.swift in Sources */,
 				9A96FEEC2ACD648300F67CDA /* ProfileView.swift in Sources */,
+				9A96FF0D2AD0151300F67CDA /* Font+Extension.swift in Sources */,
 				9A96FEF82ACEC3A700F67CDA /* TVShowsSelectionView.swift in Sources */,
 				9A96FEDE2ACD1E7700F67CDA /* Onboarding_2.swift in Sources */,
 				9A96FEEA2ACD5DD100F67CDA /* LoginView.swift in Sources */,
@@ -223,8 +420,15 @@
 				9A96FEF42ACE511100F67CDA /* MoviesSelectionView.swift in Sources */,
 				9A96FECC2ACD17E600F67CDA /* ReelTalkOnboardingApp.swift in Sources */,
 				9A96FEFB2ACF8F0600F67CDA /* HomeView.swift in Sources */,
+				9A96FF092AD0147C00F67CDA /* RegularText.swift in Sources */,
+				9A96FF052AD0142B00F67CDA /* SquareButton.swift in Sources */,
+				9A96FF1E2AD0F96200F67CDA /* MediumText.swift in Sources */,
+				9A96FF072AD0145A00F67CDA /* DemiBoldText.swift in Sources */,
 				9A96FEF22ACE482800F67CDA /* GenreSelectionView.swift in Sources */,
 				9A96FEDA2ACD18DB00F67CDA /* Splash_1.swift in Sources */,
+				9A96FF0B2AD014EE00F67CDA /* Color+Extension.swift in Sources */,
+				9A96FF112AD0155E00F67CDA /* AppDelegate.swift in Sources */,
+				9A96FF142AD0208E00F67CDA /* ChipModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

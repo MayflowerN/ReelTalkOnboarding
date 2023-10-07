@@ -5,23 +5,23 @@
 //  Created by Ellie on 10/3/23.
 //
 
-// Import the SwiftUI library
+
 import SwiftUI
 
-// Define a new SwiftUI view named Splash_1
+
 struct Splash_1: View {
     // State variable to track when to navigate to the onboarding screen
     @State private var navigateToOnboarding = false
 
-    // Define the content and layout of this view
+ 
     var body: some View {
-        // A layering stack to place views on top of each other
+        
         ZStack {
             // Set a dark color for the background
-            Color(red: 0.13, green: 0.13, blue: 0.13)
-                .edgesIgnoringSafeArea(.all) // This makes the color extend beyond safe areas
+            Color(hex: 0x212121)
+                .edgesIgnoringSafeArea(.all)
+            // Ensures full coverage, extending beyond safe areas.
 
-            // A vertical stack to organize the logo and the text
             VStack {
                 // Display the application's logo
                 Image("Final Proposed Logo")
@@ -31,12 +31,12 @@ struct Splash_1: View {
                 
                 // Display the application's name
                 Text("REEL TALK")
-                    .font(Font.custom("Avenir Next", size: 34)) // Use custom font and size
+                    .font(.custom(.demiBold, size: 34)) // Use custom font and size
                     .multilineTextAlignment(.center) // Center align the text
-                    .foregroundColor(.white) // Set text color
+                    .foregroundColor(Color(hex: 0xFFFFFF)) // Set text color
                     .padding(.top, 20) // Add spacing above the text
             }
-            // Add a behavior when this view appears
+           
             .onAppear {
                 // After a delay of 2 seconds, trigger the navigation state to change
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) { // 2 seconds delay

@@ -17,7 +17,7 @@ struct ProfileView: View {
 
     var body: some View {
         ZStack {
-            Color(red: 0.13, green: 0.13, blue: 0.13)
+            Color(hex: 0x212121)
                 .edgesIgnoringSafeArea(.all)
 
             if showWelcomeView {
@@ -27,9 +27,9 @@ struct ProfileView: View {
                     Spacer()
 
                     Text("Your profile")
-                        .font(Font.custom("Avenir Next", size: 28))
+                        .font(.custom(.demiBold, size: 28))
                         .multilineTextAlignment(.center)
-                        .foregroundColor(.white.opacity(0.92))
+                        .foregroundColor(Color(hex: 0xFFFFFFEB))
                         .frame(width: 350, alignment: .top)
 
                     Image("Profile")
@@ -41,20 +41,20 @@ struct ProfileView: View {
                             Image("RTpencil")
                                 .padding(.leading, 12)
                             TextField("Display name", text: $displayName)
-                                .font(Font.custom("Avenir Next", size: 17))
-                                .foregroundColor(.white.opacity(0.92))
+                                .font(.custom(.regular, size: 17))
+                                .foregroundColor(Color(hex: 0xFFFFFFEB))
                                 .frame(maxWidth: .infinity, alignment: .topLeading)
                         }
                         Rectangle()
                             .frame(height: 1)
-                            .foregroundColor(.white)
+                            .foregroundColor(Color(hex: 0xFFFFFF))
                             .padding(.horizontal)
 
                         Text("Your display name will be visible to other users.")
-                            .font(Font.custom("Avenir Next", size: 11))
+                            .font(.custom(.regular, size: 11))
                             .kerning(0.22)
                             .padding(.leading, 12)
-                            .foregroundColor(.white.opacity(0.92))
+                            .foregroundColor(Color(hex: 0xFFFFFFEB))
                             .frame(width: 292, alignment: .topLeading)
 
                         VStack {
@@ -69,69 +69,43 @@ struct ProfileView: View {
                                         .padding(.top, 15)
                                     Spacer()
                                 }
-                                .font(Font.custom("Avenir Next", size: 17))
-                                .foregroundColor(.white.opacity(0.92))
+                                .font(.custom(.regular, size: 17))
+                                .foregroundColor(Color(hex: 0xFFFFFFEB))
                                 .padding(.top, 15)
                             }
                         }
+                        .sheet(isPresented: $isDatePickerPresented, content: {
+                            DatePickerView(hasSelectedDate: $hasSelectedDate, isDatePickerPresented: $isDatePickerPresented, birthDate: $birthDate)
+                        })
                         .cornerRadius(8)
-                        .foregroundColor(.white)
+                        .foregroundColor(Color(hex: 0xFFFFFF))
                         .shadow(radius: 5)
                         Rectangle()
                             .frame(height: 1)
-                            .foregroundColor(.white)
+                            .foregroundColor(Color(hex: 0xFFFFFF))
                             .padding(.horizontal)
 
                         Text("Your birthday will be used to tailor our content for you. It won’t be shared with any third parties. ")
-                            .font(Font.custom("Avenir Next", size: 11))
+                            .font(.custom(.regular, size: 11))
                             .kerning(0.22)
                             .padding(.leading, 12)
-                            .foregroundColor(.white.opacity(0.92))
+                            .foregroundColor(Color(hex: 0xFFFFFFEB))
                             .frame(width: 292, alignment: .topLeading)
                         
                         Spacer(minLength: 20)
                     }
 
-                    Button(action: {
+                    SquareButton(title: "Continue") {
                         showWelcomeView = true
-                    }) {
-                        Text("Continue")
-                            .font(Font.custom("Avenir Next", size: 17))
-                            .multilineTextAlignment(.center)
-                            .foregroundColor(Color(red: 0.13, green: 0.13, blue: 0.13))
-                            .padding(10)
-                            .frame(width: 300, height: 48, alignment: .center)
-                            .background(Color(red: 1, green: 0.66, blue: 0.14))
-                            .cornerRadius(8)
+                    
                     }
                     Spacer()
                 }
+                
                 ZStack(alignment: .bottom) {
                     if isDatePickerPresented {
                         
-                        VStack {
-                            
-                            Button(action: {
-                                hasSelectedDate = true
-                                isDatePickerPresented = false
-                            }) {
-                                Text("Done")
-                                    .font(Font.custom("Avenir Next", size: 15).weight(.medium))
-                                    .kerning(0.3)
-                                    .frame(width: 380, alignment: .topTrailing)
-                                    .foregroundColor(Color(red: 1, green: 0.66, blue: 0.14))
-                            }
-                            
-                            DatePicker("Select your birthday", selection: $birthDate, displayedComponents: .date)
-                                .datePickerStyle(WheelDatePickerStyle())
-                                .labelsHidden()
-                        }
-                        .padding(.horizontal, 26.46465)
-                        .padding(.vertical, 23.81818)
-                        .background(Color(red: 0.49, green: 0.49, blue: 0.49))
-                        .background(Color(red: 0.15, green: 0.15, blue: 0.15).opacity(0.9))
-                        .cornerRadius(17.20202)
-                        .shadow(color: .black.opacity(0.1), radius: 39.69697, x: 0, y: 13.23232)
+                        
                             
                     }
                 }
@@ -150,5 +124,44 @@ struct ProfileView: View {
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
         ProfileView()
+    }
+}
+
+struct DatePickerView: View {
+    
+    @Binding var hasSelectedDate: Bool
+    @Binding var isDatePickerPresented: Bool
+    @Binding var birthDate: Date
+    
+    var body: some View {
+        VStack {
+            
+            HStack(spacing: 0) {
+                Spacer()
+                Button(action: {
+                    hasSelectedDate = true
+                    isDatePickerPresented = false
+                }) {
+                    Text("Done")
+                        .font(Font.custom("Avenir Next", size: 15).weight(.medium))
+                        .kerning(0.3)
+                        .foregroundColor(Color(hex: 0xFFA724))
+                }
+                .padding(.top, 20)
+                .padding(.vertical, 12)
+                .padding(.trailing, 20)
+            }
+            .background(Color(hex: 0x222222))
+            
+            DatePicker("Select your birthday", selection: $birthDate, displayedComponents: .date)
+                .colorScheme(.dark)
+                .datePickerStyle(.wheel)
+                .labelsHidden()
+        }
+        .padding(.vertical, 23.81818)
+        .background(Color(hex: 0x252525))
+        .shadow(color: .black.opacity(0.1), radius: 39.69697, x: 0, y: 13.23232)
+        .presentationDetents([.height(250)])
+
     }
 }
