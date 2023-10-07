@@ -7,7 +7,10 @@
 
 import SwiftUI
 
+// A view representing the user's profile.
 struct ProfileView: View {
+    
+    // States for the display name, date of birth, and presentation booleans.
     @State private var displayName: String = ""
     @State private var birthDate: Date = Date()
     @State private var isDatePickerPresented: Bool = false
@@ -17,25 +20,30 @@ struct ProfileView: View {
 
     var body: some View {
         ZStack {
+            // Background with a specific hex color
             Color(hex: 0x212121)
                 .edgesIgnoringSafeArea(.all)
 
+            // Conditional rendering of WelcomeView or main content.
             if showWelcomeView {
                 WelcomeView()
             } else {
                 VStack {
                     Spacer()
 
+                    // Profile title text
                     Text("Your profile")
                         .font(.custom(.demiBold, size: 28))
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color(hex: 0xFFFFFFEB))
                         .frame(width: 350, alignment: .top)
 
+                    // Placeholder image for a profile picture.
                     Image("Profile")
                         .padding(.bottom, 40)
                         .padding(.top, 10)
 
+                    // Display name entry field and its descriptors
                     VStack(alignment: .leading) {
                         HStack {
                             Image("RTpencil")
@@ -57,6 +65,7 @@ struct ProfileView: View {
                             .foregroundColor(Color(hex: 0xFFFFFFEB))
                             .frame(width: 292, alignment: .topLeading)
 
+                        // Button to invoke the date picker
                         VStack {
                             Button(action: {
                                 isDatePickerPresented.toggle()
@@ -74,6 +83,7 @@ struct ProfileView: View {
                                 .padding(.top, 15)
                             }
                         }
+                        // Modal date picker presentation
                         .sheet(isPresented: $isDatePickerPresented, content: {
                             DatePickerView(hasSelectedDate: $hasSelectedDate, isDatePickerPresented: $isDatePickerPresented, birthDate: $birthDate)
                         })
@@ -85,6 +95,7 @@ struct ProfileView: View {
                             .foregroundColor(Color(hex: 0xFFFFFF))
                             .padding(.horizontal)
 
+                        // Text descriptor about the purpose of entering a birth date.
                         Text("Your birthday will be used to tailor our content for you. It won’t be shared with any third parties. ")
                             .font(.custom(.regular, size: 11))
                             .kerning(0.22)
@@ -95,18 +106,16 @@ struct ProfileView: View {
                         Spacer(minLength: 20)
                     }
 
+                    // Button to navigate forward in the user flow
                     SquareButton(title: "Continue") {
                         showWelcomeView = true
-                    
                     }
                     Spacer()
                 }
                 
                 ZStack(alignment: .bottom) {
                     if isDatePickerPresented {
-                        
-                        
-                            
+                        // This is an empty condition currently, but presumably would contain UI related to the DatePicker or its backdrop.
                     }
                 }
             }
@@ -114,6 +123,7 @@ struct ProfileView: View {
         .background(Color.black.edgesIgnoringSafeArea(.all))
     }
 
+    // Function to format the birth date for display
     func getFormattedDate() -> String {
         let formatter = DateFormatter()
         formatter.dateStyle = .long
@@ -126,9 +136,10 @@ struct ProfileView_Previews: PreviewProvider {
         ProfileView()
     }
 }
-
+// A view representing the date picker modal
 struct DatePickerView: View {
     
+      // Bindings to communicate with the parent view
     @Binding var hasSelectedDate: Bool
     @Binding var isDatePickerPresented: Bool
     @Binding var birthDate: Date

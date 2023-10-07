@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct GenreSelectionView: View {
-
+    // State variable to control the display of the MoviesSelectionView.
     @State private var showMoviesSelectionView: Bool = false
-    
+    // Array to hold the genre chips data.
     @State var chipArray: [ChipModel] = [
         ChipModel(isSelected: false, titleKey: "Action"),
         ChipModel(isSelected: false, titleKey: "Adventure"),
@@ -34,7 +34,7 @@ struct GenreSelectionView: View {
         ChipModel(isSelected: false, titleKey: "Western")
     ]
     
-    
+    // Computed property to count the number of selected movies.
     var selectedMovies: Int {
         chipArray.filter({ $0.isSelected }).count
     }
@@ -43,6 +43,7 @@ struct GenreSelectionView: View {
         ZStack {
             Color(hex: 0x212121)
                 .edgesIgnoringSafeArea(.all)
+            // Display MoviesSelectionView if showMoviesSelectionView is true.
             if showMoviesSelectionView {
                 MoviesSelectionView()
             } else {
@@ -71,7 +72,7 @@ struct GenreSelectionView: View {
                         .foregroundColor(Color(hex: 0xFFFFFFEB))
                         .frame(width: 312, alignment: .top)
                         .padding(.top, 25)
-                    
+                    // Display number of genres selected.
                     Text("\(selectedMovies)/3 selected")
                         .font(.custom(.regular, size: 15))
                     
@@ -79,7 +80,7 @@ struct GenreSelectionView: View {
                         .multilineTextAlignment(.trailing)
                         .foregroundColor(Color(hex: 0xFFFFFF))
                         .padding(.bottom,15)
-                    
+                    // Display the genre chips using a GeometryReader.
                     GeometryReader { geo in
                         var width = CGFloat.zero
                         var height = CGFloat.zero
@@ -129,7 +130,7 @@ struct GenreSelectionView: View {
                             }
                         })
                     }
-                    // Continue Button
+                    // Continue Button to navigate to the next view.
                     SquareButton(title: "Continue") {
                         showMoviesSelectionView = true
                  
@@ -138,11 +139,12 @@ struct GenreSelectionView: View {
                 .padding()
             }
         }
+        // Listen to changes in chipArray.
         .onReceive($chipArray.publisher, perform: { value  in
             
         })
     }
-    
+    // Function to handle selection/deselection of genres.
     private func toggleSelection(for item: ChipModel) {
         if let index = chipArray.firstIndex(where: { $0.id == item.id }) {
             // If this genre is already selected, always allow de-selection
