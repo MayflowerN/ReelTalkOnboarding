@@ -12,7 +12,7 @@ struct ReelTalkOnboardingView: View {
     // Keeps track of which onboarding screen is currently being displayed
     @State private var currentPage = 0
     @State private var showLoginView: Bool = false  // Controls the presentation of the login screen.
-    @State private var showSignUpView: Bool = false  // Controls the presentation of the sign-up screen.
+    @State private var showSignUpView1: Bool = false  // Controls the presentation of the sign-up screen.
 
     var body: some View {
         // A UI component that displays a series of pages and allows for swipe navigation between them
@@ -44,12 +44,12 @@ struct ReelTalkOnboardingView: View {
                 
                 if currentPage == 2 {
                     SquareButton(title: "Continue", action: {
-                        showSignUpView.toggle()
+                        showSignUpView1.toggle()
                         // Toggles the presentation of the sign-up view.
                     })
                     .padding(.bottom, 20)
-                    .fullScreenCover(isPresented: $showSignUpView) {
-                        SignUpView()  // Replace with your sign-up view
+                    .fullScreenCover(isPresented: $showSignUpView1) {
+                        SignUpView1()  // Replace with your sign-up view
                     }
 
                 }

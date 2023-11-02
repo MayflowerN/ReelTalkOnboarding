@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>259349555151-pbpdu5af6o1irtl0es1n2dr5ffc4g5n4.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.259349555151-pbpdu5af6o1irtl0es1n2dr5ffc4g5n4</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDE2o8_zKjEAdwXlJ5TyjNHjnlGHNxrtL0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>259349555151</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.reeltalk.www</string>
+	<key>PROJECT_ID</key>
+	<string>reeltalk-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>reeltalk-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:259349555151:ios:d7ca276658ae5524d394ba</string>
+	<key>DATABASE_URL</key>
+	<string>https://reeltalk-app-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
